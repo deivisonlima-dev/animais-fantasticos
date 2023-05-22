@@ -1,14 +1,12 @@
 {
-  "name": "aula-002-projeto-html-css---javascript-final--eslint",
+  "name": "animais-fantasticos",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.21.8",

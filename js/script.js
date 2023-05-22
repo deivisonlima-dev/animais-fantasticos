@@ -29,4 +29,3 @@ initFecthBitcoin();
 // Verificar tipo de dados do protótipo
 const typeofData = (dado) => Object.prototype.toString.call(dado);
 console.log(typeofData('ola mundo'));
-console.log('ola mundo 7');
