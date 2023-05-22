@@ -1,0 +1,167 @@
+.modal-container {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  place-content: center;
+}
+.modal {
+  background-color: #fff;
+  padding: 3rem;
+  border: 10px solid var(--bg-color);
+  box-shadow: 0 0 0 10px #fff;
+  max-width: 600px;
+  min-width: 300px;
+  position: relative;
+}
+.fechar {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--bg-color-secondary);
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font: bold 1.2rem var(--font-primary);
+  color: #fff;
+  cursor: pointer;
+}
+.modal label {
+  display: block;
+  font: bold 1.2rem var(--font-primary);
+  margin-bottom: 0.8rem;
+}
+.modal input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--bg-color);
+  margin-bottom: 0.8rem;
+  border-radius: 4px;
+}
+.modal button[type="submit"] {
+  font: bold 1.2rem var(--font-primary);
+  padding: 0.8rem 2rem;
+  border: none;
+  background: var(--bg-color-secondary);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.fechar:hover,
+.modal button[type="submit"]:hover {
+  background: rgb(129, 22, 22);
+}
+
+.modal-container.ativo {
+  display: grid;
+}
+
+.ativo .modal {
+  animation: modal 0.5s forwards;
+}
+
+@keyframes modal {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* .modal-container {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.modal {
+  background: #ffffff;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 3rem;
+  border: 10px solid var(--bg-color);
+  box-shadow: 0 0 0 10px #fff;
+  position: relative;
+}
+.fechar {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  background: var(--bg-color-secondary);
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: var(--font-primary);
+  cursor: pointer;
+}
+
+.modal label {
+  display: block;
+  font-family: var(--font-primary);
+  font-weight: bold;
+  margin: 1rem 0 0.5rem 0;
+}
+.modal input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border: 2px solid var(--bg-color);
+  border-radius: 4px;
+}
+.modal button[type="submit"] {
+  background: var(--bg-color-secondary);
+  padding: 0.7rem 2rem;
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  font-weight: bold;
+}
+.modal button[type="submit"]:hover,
+.fechar:hover {
+  background: #821b10;
+}
+
+.modal-container.ativo {
+  display: flex;
+  transition: 0.3s;
+}
+
+.ativo .modal{
+  animation: show 0.5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+} */
