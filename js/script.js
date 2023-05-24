@@ -1,7 +1,7 @@
 import initWritingEfferct from './modules/escrever.js';
 import SmoothScrolling from './modules/scroll-suave.js';
 import initAnimationScroll from './modules/animate-scroll.js';
-import initTabMenu from './modules/tabmenu.js';
+import TabNav from './modules/tabnav.js';
 import Accordion from './modules/accordion.js';
 import initModal from './modules/modal.js';
 import initTooltip from './modules/tooltip.js';
@@ -17,9 +17,11 @@ smoothScrolling.init();
 const accordion = new Accordion('[data-animate="accordion"] dt');
 accordion.init();
 
+const tabNav = new TabNav('[data-tab="menu"] li', '[data-tab="content"] section');
+tabNav.init();
+
 initWritingEfferct();
 initAnimationScroll();
-initTabMenu();
 initModal();
 initTooltip();
 initDropdownMenu();
