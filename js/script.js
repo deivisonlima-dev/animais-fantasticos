@@ -25,7 +25,6 @@ modal.init();
 
 initWritingEfferct();
 initAnimationScroll();
-// initModal();
 initTooltip();
 initDropdownMenu();
 initMenuMobile();
