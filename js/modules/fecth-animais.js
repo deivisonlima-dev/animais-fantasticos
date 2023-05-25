@@ -1,4 +1,4 @@
-import initAnimateNumbers from './numeros.js';
+import AnimateNumbers from './animate-numbers';
 
 // animais fecth
 function createAnimail(animal) {
@@ -23,7 +23,8 @@ const initFecthAnimais = () => {
           const divAnimal = createAnimail(animal);
           grid.appendChild(divAnimal);
         });
-        initAnimateNumbers();
+        const animateNumbers = new AnimateNumbers('[data-numero]', '.numeros', 'animate');
+        animateNumbers.init();
       }).catch((erro) => {
         console.log(Error(erro));
       });
