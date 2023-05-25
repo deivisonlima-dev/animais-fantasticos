@@ -34,6 +34,7 @@ class Modal {
     if (this.openButton && this.closeButton && this.containerModal) {
       this.addModalEvent();
     }
+    return this;
   }
 }
 export default Modal;
