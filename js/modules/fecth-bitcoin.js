@@ -1,6 +1,5 @@
 // fetch Bitcoin
 const fetchBitcoin = (url, target) => {
-  console.log('Teste');
   fetch(url)
     .then((response) => response.json())
     .then((bitcoin) => {
