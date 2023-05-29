@@ -5,20 +5,43 @@ class AnimationScroll {
     this.windowHalf = window.innerHeight * 0.6;
   }
 
-  animateScrolling = () => {
-    this.sections.forEach((section) => {
-      const sectionTop = section.getBoundingClientRect().top - this.windowHalf;
-      if (sectionTop < 0) {
-        section.classList.add('animate');
-      } else if (section.classList.contains('animate')) {
-        section.classList.remove('animate');
+  // Pega a distância em relação
+  // ao topo do site
+  getDistance = () => {
+    this.distance = [...this.sections].map((section) => {
+      const offset = section.offsetTop;
+      return {
+        element: section,
+        offset: Math.floor(offset - this.windowHalf),
+      };
+    });
+  };
+
+  // Verifica a distância em cada objeto
+  // em relação ao scroll do site
+  checkDistance = () => {
+    console.log('ativou');
+    this.distance.forEach((item) => {
+      if (window.scrollY > item.offset) {
+        item.element.classList.add('animate');
+      } else if (item.element.classList.contains('animate')) {
+        item.element.classList.remove('animate');
       }
     });
   };
 
   init() {
-    this.animateScrolling();
-    window.addEventListener('scroll', this.animateScrolling);
+    if (this.sections.length) {
+      this.getDistance();
+      this.checkDistance();
+      window.addEventListener('scroll', this.checkDistance);
+    }
+    return this;
+  }
+
+  // Remove o event de scroll
+  stop() {
+    window.removeEventListener('scroll', this.checkDistance);
   }
 }
 export default AnimationScroll;
@@ -45,6 +68,7 @@ export default AnimationScroll;
 
 //   init() {
 //     this.animateScrolling();
+//     return this;
 //   }
 // }
 // export default AnimationScroll;
