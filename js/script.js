@@ -8,7 +8,7 @@ import initTooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
-import initFecthAnimais from './modules/fecth-animais.js';
+import fetchAnimals from './modules/fecth-animais.js';
 import initFecthBitcoin from './modules/fecth-bitcoin.js';
 
 const smoothScrolling = new SmoothScrolling('[data-menu="suave"] a[href^="#"]');
@@ -29,7 +29,7 @@ initTooltip();
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
-initFecthAnimais();
+fetchAnimals('../../animaisapi.json', '.numeros-grid');
 initFecthBitcoin();
 
 // Verificar tipo de dados do protótipo
