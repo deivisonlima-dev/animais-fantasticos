@@ -1,6 +1,6 @@
 import initWritingEfferct from './modules/escrever.js';
 import SmoothScrolling from './modules/scroll-suave.js';
-import initAnimationScroll from './modules/animate-scroll.js';
+import AnimationScroll from './modules/animate-scroll.js';
 import TabNav from './modules/tabnav.js';
 import Accordion from './modules/accordion.js';
 import Modal from './modules/modal.js';
@@ -23,8 +23,10 @@ tabNav.init();
 const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
 modal.init();
 
+const animateScrolling = new AnimationScroll('[data-animate="scroll"]');
+animateScrolling.init();
+
 initWritingEfferct();
-initAnimationScroll();
 initTooltip();
 initDropdownMenu();
 initMenuMobile();
