@@ -9,7 +9,7 @@ import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
 import fetchAnimals from './modules/fecth-animais.js';
-import initFecthBitcoin from './modules/fecth-bitcoin.js';
+import fetchBitcoin from './modules/fecth-bitcoin.js';
 
 const smoothScrolling = new SmoothScrolling('[data-menu="suave"] a[href^="#"]');
 smoothScrolling.init();
@@ -30,7 +30,7 @@ initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
 fetchAnimals('../../animaisapi.json', '.numeros-grid');
-initFecthBitcoin();
+fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 
 // Verificar tipo de dados do protótipo
 const typeofData = (dado) => Object.prototype.toString.call(dado);
