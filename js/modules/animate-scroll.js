@@ -22,7 +22,6 @@ class AnimationScroll {
   // Verifica a distância em cada objeto
   // em relação ao scroll do site
   checkDistance() {
-    console.log('teste');
     this.distance.forEach((item) => {
       if (window.scrollY > item.offset) {
         item.element.classList.add('animate');
