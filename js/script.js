@@ -7,7 +7,7 @@ import Modal from './modules/modal.js';
 import initTooltip from './modules/tooltip.js';
 import DropdownMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
-import initFuncionamento from './modules/funcionamento.js';
+import Operation from './modules/funcionamento.js';
 import fetchAnimals from './modules/fecth-animais.js';
 import fetchBitcoin from './modules/fecth-bitcoin.js';
 
@@ -32,10 +32,12 @@ dropdownMenus.init();
 const menuMobile = new MenuMobile('[data-menu="mobile"]', '[data-menu="lista"]');
 menuMobile.init();
 
+const operation = new Operation('[data-semana]', 'open');
+console.log(operation);
+operation.init();
+
 initWritingEfferct();
 initTooltip();
-
-initFuncionamento();
 fetchAnimals('../../animaisapi.json', '.numeros-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 
