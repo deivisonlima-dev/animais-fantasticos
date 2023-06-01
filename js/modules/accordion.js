@@ -1,4 +1,3 @@
-// Accordion list
 class Accordion {
   constructor(list) {
     this.accordionList = document.querySelectorAll(list);// '[data-animate="accordion"] dt'

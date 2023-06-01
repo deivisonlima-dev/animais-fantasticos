@@ -1,4 +1,3 @@
-// Tab menu
 class TabNav {
   constructor(menu, content) {
     this.tabMenu = document.querySelectorAll(menu);

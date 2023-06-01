@@ -8,8 +8,8 @@ import initTooltip from './modules/tooltip.js';
 import DropdownMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
 import Operation from './modules/funcionamento.js';
-import fetchAnimals from './modules/fecth-animais.js';
-import fetchBitcoin from './modules/fecth-bitcoin.js';
+import fetchAnimals from './modules/fetch-animais.js';
+import fetchBitcoin from './modules/fetch-bitcoin.js';
 
 const smoothScrolling = new SmoothScrolling('[data-menu="suave"] a[href^="#"]');
 smoothScrolling.init();
@@ -33,14 +33,9 @@ const menuMobile = new MenuMobile('[data-menu="mobile"]', '[data-menu="lista"]')
 menuMobile.init();
 
 const operation = new Operation('[data-semana]', 'open');
-console.log(operation);
 operation.init();
 
 initWritingEfferct();
 initTooltip();
 fetchAnimals('../../animaisapi.json', '.numeros-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
-
-// Verificar tipo de dados do protótipo
-const typeofData = (dado) => Object.prototype.toString.call(dado);
-console.log(typeofData('ola mundo'));
