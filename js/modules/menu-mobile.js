@@ -13,8 +13,8 @@ class MenuMobile {
 
   openMenu = (event) => {
     event.stopPropagation();
-    this.menuList.classList.toggle(this.activeClass);
-    this.btnMenu.classList.toggle(this.activeClass);
+    this.menuList.classList.add(this.activeClass);
+    this.btnMenu.classList.add(this.activeClass);
 
     outsideClick(this.menuList, this.events, () => {
       this.menuList.classList.remove(this.activeClass);
