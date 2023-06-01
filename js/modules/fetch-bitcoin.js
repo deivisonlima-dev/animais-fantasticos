@@ -1,4 +1,3 @@
-// fetch Bitcoin
 const fetchBitcoin = (url, target) => {
   fetch(url)
     .then((response) => response.json())

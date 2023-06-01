@@ -47,6 +47,8 @@ class AnimationScroll {
 }
 export default AnimationScroll;
 
+// Animação usando IntersectionObserver()
+
 // class AnimationScroll {
 //   constructor(sections) {
 //     this.sections = document.querySelectorAll(sections);
