@@ -57,20 +57,30 @@
   cursor: pointer;
 }
 .js [data-animate="accordion"] dt::after {
-  content: "▼";
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url("../img/arrow-red.svg") no-repeat center center;
   margin-left: 10px;
+  transition: transform .3s;
+  transform: rotate(90deg);
 }
+
 .js [data-animate="accordion"] dt.active::after {
-  content: "▲";
-  margin-left: 10px;
+  content: "";
+  transform: rotate(-90deg);
 }
+
 .js [data-animate="accordion"] dd {
   display: none;
 }
+
 .js [data-animate="accordion"] dd.active {
   display: block;
   animation: slideShow 0.5s forwards;
 }
+
 @keyframes slideShow {
   from {
     opacity: 0;

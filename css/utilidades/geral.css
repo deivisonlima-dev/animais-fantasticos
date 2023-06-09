@@ -155,9 +155,18 @@
   font-size: 3rem;
 }
 
+.arrow-black {
+  background: url("../../img/arrow-black.svg") no-repeat center center;
+  display: inline-block;
+  width: 8px;
+  height: 10px;
+  margin-left: 5px;
+}
+
 @media (max-width: 800px) {
   .grid-container {
     grid-template-columns: 1fr;
+    width: 100vw;
   }
   .grid-section,
   .copy,
@@ -165,8 +174,8 @@
     grid-column: 1;
   }
   .grid-section {
-    grid-template-columns: 200px 1fr;
-    gap: 10px;
+    grid-template-columns: 160px 1fr;
+    gap: 8px;
     margin-bottom: 2rem;
   }
   .animais-lista {
@@ -182,7 +191,7 @@
   }
   .titulo {
     font-size: 4rem;
-    margin-bottom: 6.5rem;
+    margin-bottom: 4.5rem;
     height: auto;
   }
   .header {
@@ -192,10 +201,19 @@
   .copy {
     margin-bottom: 0;
   }
+  .animais h2 {
+    font-size: 1.5rem;
+  }
+  .animais h2::before {
+    width: 2.3rem;
+    height: 0.875rem;
+  }
+
 }
 @media (max-width: 600px) {
   .titulo {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
   }
   .header {
     margin: 0;
